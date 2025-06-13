@@ -35,7 +35,7 @@ export function BackgroundMusic() {
             loop
             preload="auto"
         >
-            <source src="../../public/music.mp3" type="audio/mpeg" />
+            <source src="/music.mp3" type="audio/mpeg" />
         </audio>
     );
 }

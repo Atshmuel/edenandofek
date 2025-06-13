@@ -245,7 +245,7 @@ function App() {
   return (
     <main className="relative font-bds">
       <BackgroundMusic startTime={11} />
-      <Sections id={"sec-1"} type="header" styles="h-screen mb-10 pb-5">
+      <Sections id={"sec-1"} type="header" styles="h-screen mb-14 pb-5">
         <div
           className={`flex flex-row justify-start py-1 items-center md:justify-start  border-b-2`}
         >
@@ -312,7 +312,7 @@ function App() {
         >
           <Timer styles={timerOnTop} />
         </div>
-        <div className={`flex sm:hidden justify-evenly mt-10`}>
+        <div className={`flex sm:hidden justify-evenly mt-10 mb-10`}>
           <Image
             styles={`w-28 h-32`}
             src={[sixthImgCompressed]}

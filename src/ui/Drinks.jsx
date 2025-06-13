@@ -25,35 +25,33 @@ function Drinks({ menuItem = [], topHeader = "", header }) {
         {topHeader}
       </h2>
       <div>
+        <h2 className="font-bold mt-1 tracking-widest">
+          {header.at(0) && header.at(0)}
+        </h2>
         <ul className=" text-stone-600 z-20">
           {menuItem.map((item, i) => (
             <div key={i}>
-              <h2 className="font-bold mt-1 tracking-widest">
-                {header.at(i) && header.at(i)}
-              </h2>
               <div className={`flex justify-between items-center`}>
                 <div className="divide-y md:w-full">
-                  {item
-                    ? item.map((el, index) => (
-                      <div
-                        key={index}
-                        className="flex my-2 py-2 md:justify-between "
-                      >
-                        <li className="text-[0.85rem]  sm:text-sm tracking-tighter font-semibold">
-                          {el}.
-                        </li>
-                        <Image
-                          type={"aside"}
-                          key={index}
-                          styles={
-                            "w-20 md:w-30  rounded-full transition-all duration-300"
-                          }
-                          rootMargin={100}
-                          src={[imgs.at(index).at(0)]}
-                        />
-                      </div>
-                    ))
-                    : null}
+                  {item ? (
+                    <div
+                      key={item.category}
+                      className="flex my-2 py-2 md:justify-between "
+                    >
+                      <li className="text-[0.85rem]  sm:text-sm tracking-tighter font-semibold">
+                         {item.category} - {item.description}.
+                      </li>
+                      <Image
+                        type={"aside"}
+                        key={i}
+                        styles={
+                          "w-20 md:w-30  rounded-full transition-all duration-300"
+                        }
+                        rootMargin={100}
+                        src={[imgs.at(i).at(0)]}
+                      />
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>

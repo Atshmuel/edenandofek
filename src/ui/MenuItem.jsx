@@ -1,7 +1,7 @@
 import Image from "./Image";
 
-const foccach = "https://static.wixstatic.com/media/309aeb_8275e2278b9a4e6ca875ef4d5fe36cce~mv2.jpg/v1/fit/w_728,h_1300,q_90,enc_avif,quality_auto/309aeb_8275e2278b9a4e6ca875ef4d5fe36cce~mv2.jpg"
-
+const foccach =
+  "https://static.wixstatic.com/media/309aeb_8275e2278b9a4e6ca875ef4d5fe36cce~mv2.jpg/v1/fit/w_728,h_1300,q_90,enc_avif,quality_auto/309aeb_8275e2278b9a4e6ca875ef4d5fe36cce~mv2.jpg";
 
 const imgs = [foccach];
 function MenuItem({ menuItem = [], topHeader = "", header, imgsToShow = [] }) {
@@ -11,30 +11,28 @@ function MenuItem({ menuItem = [], topHeader = "", header, imgsToShow = [] }) {
         {topHeader}
       </h2>
       <div className="mb-4">
-        <ul className=" text-stone-600 z-20 divide-y">
+        <h2 className="font-bold mt-1 md:text-lg tracking-widest ">
+          {header.at(0) && header.at(0)}
+        </h2>
+        <ul className="list-disc text-stone-600 z-20 divide-y pr-5">
           {menuItem.map((item, i) => (
-            <div key={i} className="pb-2 ">
-              <h2 className="font-bold mt-1 md:text-lg tracking-widest ">
-                {header.at(i) && header.at(i)}
-              </h2>
+            <div key={i} className="pb-2">
               <div
-                className={`${imgsToShow.includes(i)
-                  ? "flex justify-between items-center "
-                  : ""
-                  }`}
+                className={`${
+                  imgsToShow.includes(i)
+                    ? "flex justify-between items-center "
+                    : ""
+                }`}
               >
                 <div className="md:pl-6 ">
-                  {item
-                    ? item.map((el) => (
-                      <li
-                        className={`text-[0.85rem] sm:text-[1rem] tracking-tighter ${el.length > 180 && "w-[90%]"
-                          }`}
-                        key={el}
-                      >
-                        - {el}.
-                      </li>
-                    ))
-                    : null}
+                  {item ? (
+                    <li
+                      className={`text-[0.85rem] sm:text-[1rem] tracking-tighter w-[95%] `}
+                      key={item.category}
+                    >
+                      <span className="font-bold">{item.category} - </span> {item.description}.
+                    </li>
+                  ) : null}
                 </div>
 
                 {imgsToShow.includes(i) ? (

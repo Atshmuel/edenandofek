@@ -7,7 +7,7 @@ export function BackgroundMusic() {
         const handleFirstInteraction = () => {
             const audio = audioRef.current;
             if (audio) {
-                audio.volume = 0.3;
+                // audio.volume = 100;
                 audio.currentTime = 10;
                 audio.play().catch(console.error);
             }
@@ -35,7 +35,7 @@ export function BackgroundMusic() {
             loop
             preload="auto"
         >
-            <source src="./music.mp3" type="audio/mpeg" />
+            <source src="../../public/music.mp3" type="audio/mpeg" />
         </audio>
     );
 }

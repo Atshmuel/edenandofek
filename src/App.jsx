@@ -6,9 +6,10 @@ import Image from "./ui/Image";
 import Sections from "./ui/Sections";
 import MenuItem from "./ui/MenuItem";
 
-const foccach = "https://static.wixstatic.com/media/309aeb_8275e2278b9a4e6ca875ef4d5fe36cce~mv2.jpg/v1/fit/w_728,h_1300,q_90,enc_avif,quality_auto/309aeb_8275e2278b9a4e6ca875ef4d5fe36cce~mv2.jpg"
-const dessert = "https://static.wixstatic.com/media/309aeb_e150e3835b604bb2bdfcdfbb0c4f2b34~mv2.jpg/v1/fit/w_728,h_1300,q_90,enc_avif,quality_auto/309aeb_e150e3835b604bb2bdfcdfbb0c4f2b34~mv2.jpg";
-
+const foccach =
+  "https://static.wixstatic.com/media/309aeb_8275e2278b9a4e6ca875ef4d5fe36cce~mv2.jpg/v1/fit/w_728,h_1300,q_90,enc_avif,quality_auto/309aeb_8275e2278b9a4e6ca875ef4d5fe36cce~mv2.jpg";
+const dessert =
+  "https://static.wixstatic.com/media/309aeb_e150e3835b604bb2bdfcdfbb0c4f2b34~mv2.jpg/v1/fit/w_728,h_1300,q_90,enc_avif,quality_auto/309aeb_e150e3835b604bb2bdfcdfbb0c4f2b34~mv2.jpg";
 
 //imgs
 import forthImg from "./assets/imgs/image5.jpeg";
@@ -30,187 +31,156 @@ import { CiFacebook, CiHeart } from "react-icons/ci";
 import { FaWaze } from "react-icons/fa6";
 import { BackgroundMusic } from "./ui/BackgroundMusic";
 
-
-const starters = {
-  // ביס פוקאצ'יות מהטאבון
-  focaccia: {
+const starters = [
+  {
     category: "ביס פוקאצ'יות מהטאבון",
-    description: "פוקאצ'ה נפוליטנית מהטאבון עם חטיף עגבניות עם גבינת ועלי בזיליקום, רוטב פסטו, דבש, שמנת טבעונית, גבינת צהובה טבעונית, פרמז׳ן טבעוני, גבינת בולגרית טבעונית, שמן זית ואורגנו, עלי אורגנו ובזיליקום, עלי רוקט ועגבניות שרי קלויות, בצל אדום קלוי, זוקיני קלוי, חצילים מטוגנים, ארטישוק בתחמיץ וזיתי קלמטה"
+    description:
+      "פוקאצ'ה נפוליטנית מהטאבון עם חטיף עגבניות עם גבינת ועלי בזיליקום, רוטב פסטו, דבש, שמנת טבעונית, גבינת צהובה טבעונית, פרמז׳ן טבעוני, גבינת בולגרית טבעונית, שמן זית ואורגנו, עלי אורגנו ובזיליקום, עלי רוקט ועגבניות שרי קלויות, בצל אדום קלוי, זוקיני קלוי, חצילים מטוגנים, ארטישוק בתחמיץ וזיתי קלמטה",
   },
-
-  // ביס מעולם הדגים
-  fishDish: {
+  {
     category: "ביס מעולם הדגים",
-    description: "מנת דגים מגוונת עם חסה לאליק, סקורדליה, בצל ירוק, סלט משוויה, שישיות לימון איקרה לבנה מחבל הבלקן, סלמון מעושן סקוטי, פילה מקרל מעושן, הרינג הולנדי, איולי לימון כבוש ופלפל שושקה, איולי טרטר וצלפים, צ'ימיצ'ורי, כוסברה ומיני פרנה"
+    description:
+      "מנת דגים מגוונת עם חסה לאליק, סקורדליה, בצל ירוק, סלט משוויה, שישיות לימון איקרה לבנה מחבל הבלקן, סלמון מעושן סקוטי, פילה מקרל מעושן, הרינג הולנדי, איולי לימון כבוש ופלפל שושקה, איולי טרטר וצלפים, צ'ימיצ'ורי, כוסברה ומיני פרנה",
   },
-
-  // ביס יווני
-  greekDish: {
+  {
     category: "ביס יווני",
-    description: "מנת סגנון יווני עם עלי גפן בלימון שמן זית ואורגנו, צזיקי עם מלפפון, שום, שמיר ונענע, זיתים יווניים מתובלים, פאווה עם בצל אדום, צלפים, שישיות לימון, פלפל ירוק חריף פרוס וגירוס יווני עם שום ואורגנו"
+    description:
+      "מנת סגנון יווני עם עלי גפן בלימון שמן זית ואורגנו, צזיקי עם מלפפון, שום, שמיר ונענע, זיתים יווניים מתובלים, פאווה עם בצל אדום, צלפים, שישיות לימון, פלפל ירוק חריף פרוס וגירוס יווני עם שום ואורגנו",
   },
-
-  // ביס אסאדו וקורנביף
-  asadoCornedBeef: {
+  {
     category: "ביס אסאדו וקורנביף",
-    description: "אסאדו וקורנביף עם עצם מתובלים בבישול ארוך, רוטב ציר של עצמו, איולי בזיליקום, רוטב קארי, מלפפון חמוץ, פלחי עגבניות, בצל אדום וחאסה לאליק לצד באן"
+    description:
+      "אסאדו וקורנביף עם עצם מתובלים בבישול ארוך, רוטב ציר של עצמו, איולי בזיליקום, רוטב קארי, מלפפון חמוץ, פלחי עגבניות, בצל אדום וחאסה לאליק לצד באן",
   },
-
-  // ביס של עוף
-  chickenDish: {
+  {
     category: "ביס של עוף",
-    description: "עוף שלם במרינדה של מדורה, רוטב קארי-קוקוס בנגיעות אריסה יפנית, אטריות ביצים, ירקות ירוקים, אדממה, אפונה ירוקה, עלי בוקצוי, שעועית ירוקה, זוקני, עלי נענע, בזיליקום ומעט אריסה יפנית"
+    description:
+      "עוף שלם במרינדה של מדורה, רוטב קארי-קוקוס בנגיעות אריסה יפנית, אטריות ביצים, ירקות ירוקים, אדממה, אפונה ירוקה, עלי בוקצוי, שעועית ירוקה, זוקני, עלי נענע, בזיליקום ומעט אריסה יפנית",
   },
-
-  // ביס קבב
-  kebabDish: {
+  {
     category: "ביס קבב",
-    description: "קבב בקר מתובל בנדיבות יחד עם עשבי תיבול, צרוב על פלאנצת גריל, פילה של חצילים צלויים, סחינה פיסטוק, עלי כוסברה ולחוח"
+    description:
+      "קבב בקר מתובל בנדיבות יחד עם עשבי תיבול, צרוב על פלאנצת גריל, פילה של חצילים צלויים, סחינה פיסטוק, עלי כוסברה ולחוח",
   },
-
-  // ביס צלי בקר
-  beefRoastDish: {
+  {
     category: "ביס צלי בקר",
-    description: "תבשיל בקר עם חומוס, פלפל צילי על מגדרה של בורגול וסלט עלים ירוקים"
-  }
-}
-const firsts = {
-  centerSalads: {
+    description:
+      "תבשיל בקר עם חומוס, פלפל צילי על מגדרה של בורגול וסלט עלים ירוקים",
+  },
+];
+
+const firsts = [
+  {
     category: "חצילים",
-    description: "חציל שלם שרוף עם טחינה גולמית, שמן זית מתובל בשום ומרווה, סומק, מיץ לימון, זרעי עגבניות, קשיו קלוי ובצל ירוק"
+    description:
+      "חציל שלם שרוף עם טחינה גולמית, שמן זית מתובל בשום ומרווה, סומק, מיץ לימון, זרעי עגבניות, קשיו קלוי ובצל ירוק",
   },
-
-  // חומוס-חומוס
-  hummus: {
-    category: "חומוס-חומוס",
-    description: "עם חצילים מטוגנים, ויינגרט, שום, לימון פלפל שיפקה, פטרוזיליה, צנוברים קלויים, טחינה וגרגירי חומוס"
+  {
+    category: "חומוס",
+    description:
+      "עם חצילים מטוגנים, ויינגרט, שום, לימון פלפל שיפקה, פטרוזיליה, צנוברים קלויים, טחינה וגרגירי חומוס",
   },
-
-  // סלט כרוב אסייתי-אצות ואקמה
-  asianCabbageSalad: {
+  {
     category: "סלט כרוב אסייתי-אצות ואקמה",
-    description: "איטריות שעועית, בדר גוליאן, אפונה, שעועית ירוקה, על נענע, על כוסברה בצל ירוק, פפאיה ירוקה, פלפל צ'ילי אדום, גינגר כבוש, פטריות שיטאקי, חסב, כרוב לבן, כרוב אדום, בוטנים וסומום קלוי"
+    description:
+      "איטריות שעועית, בדר גוליאן, אפונה, שעועית ירוקה, על נענע, על כוסברה בצל ירוק, פפאיה ירוקה, פלפל צ'ילי אדום, גינגר כבוש, פטריות שיטאקי, חסב, כרוב לבן, כרוב אדום, בוטנים וסומום קלוי",
   },
-
-  // סלט עגבניות שרי
-  cherryTomatoSalad: {
+  {
     category: "סלט עגבניות שרי",
-    description: "שרי צבעוני ובזיליקום - מיקס שרי, על בזיליקום, זיתי קלמטה, נבעות זיתונות, רצועת מלפפון ירוק בתיבול שום שמן ולימון"
+    description:
+      "שרי צבעוני ובזיליקום - מיקס שרי, על בזיליקום, זיתי קלמטה, נבעות זיתונות, רצועת מלפפון ירוק בתיבול שום שמן ולימון",
   },
-
-  // קרפצ'יו בקר
-  beefCarpaccio: {
+  {
     category: "קרפצ'יו בקר",
-    description: "סינטה פרוסה, סקורדליה, שמן בצל ירוק, נקטר בלסמי, קרם עגבניות, על מיקרן אפונה"
+    description:
+      "סינטה פרוסה, סקורדליה, שמן בצל ירוק, נקטר בלסמי, קרם עגבניות, על מיקרן אפונה",
   },
-
-  // סלט פיצוחים
-  nutSalad: {
+  {
     category: "סלט פיצוחים",
-    description: "רוקט, נענע, פטרוזיליה, כוסברה, בזיליקום, פיצוחים פיקנטיים מקורמלים, שמן זית, מיץ לימון, סוכר, בורגול ירק קצוץ, פטרוזיליה, כוסברה, בצל ירוק, נענע, מלפפון, עגבניות"
+    description:
+      "רוקט, נענע, פטרוזיליה, כוסברה, בזיליקום, פיצוחים פיקנטיים מקורמלים, שמן זית, מיץ לימון, סוכר, בורגול ירק קצוץ, פטרוזיליה, כוסברה, בצל ירוק, נענע, מלפפון, עגבניות",
   },
-
-  burgulSalad: {
+  {
     category: "סלט בורגול",
-    description: "ירק קצוץ, פטרוזיליה, כוסברה, בצל ירוק, נענע, מלפפון ועגבניה"
+    description: "ירק קצוץ, פטרוזיליה, כוסברה, בצל ירוק, נענע, מלפפון ועגבניה",
   },
-
-  centers: {
+  {
     category: "מטבלים ולחמים",
     description: "לחם הבית, מוגש לצד לזיתים מתובלים, פלפל חריף וחצילים בתחמיץ",
-  }
-};
-const mains = {
-  mainDish: {
+  },
+];
+const mains = [
+  {
     category: "פילה דניס צלוי בשמן זית ואורגנו",
-    description: "מוגש על מצע של ציזיקי לצד עלי גפן, זיתים מתובלים, שמן בצל ירוק, לימון על הגריל, סלסה עגבניות ולימון כבוש"
+    description:
+      "מוגש על מצע של ציזיקי לצד עלי גפן, זיתים מתובלים, שמן בצל ירוק, לימון על הגריל, סלסה עגבניות ולימון כבוש",
   },
+  {
+    category: "פילה בקר",
+    description: "פילה בקר לצד פירה כמהין, באן אסאדו וקרם גזר פיקנטיי",
+  },
+  {
+    category: "מולארד",
+    description: "חזה מולארד על מצע של קרם",
+  },
+  {
+    category: "פרגית",
+    description: "פרגית בסומק על מצע ריזוטו",
+  },
+  {
+    category: "רביולי טבעוני",
+    description: "רביולי ארטישוק ברוטב פטריות (מומלץ)",
+  },
+];
 
-  beefWithTruffle: {
-    category: "פילה בקר לצד פירה כמהין",
-    description: "באן אסאדו וקרם גזר פיקנטי"
-  },
-
-  mulidOnSweetPotato: {
-    category: "מולארד על מצע של קרם בטטה",
-    description: ""
-  },
-
-  chickenInSumac: {
-    category: "פרגית בסומק על מצע ריזוטו",
-    description: ""
-  },
-
-  veganRavioliArtichoke: {
-    category: "רביולי ארטישוק ברוטב פטריות - טבעוני",
-    description: ""
-  },
-};
 const spacialDesserts = {
   category: "מתוקים ומפנקים",
-  description: "שלל קינוחים מפנקים מוגשים לרחבת הריקודים בליווי מגוון פירות העונה"
-}
+  description:
+    "שלל קינוחים מפנקים מוגשים לרחבת הריקודים בליווי מגוון פירות העונה",
+};
+
 const afterParty = {
   category: "אפטר פארטי",
-  portions: "1 חנות",
-  description: "בורקס טורקי - בורקס במבחר טעמים, אריסה, ביצה קשה, מלפפון חמוץ, חצילים, לצד רסק עגבניות פיקנטי, חמוצי הבית, טחינה ועמבה"
-}
-const cocktails = {
-  whiskeySourNY: {
+  description:
+    "בורקס טורקי - בורקס במבחר טעמים, אריסה, ביצה קשה, מלפפון חמוץ, חצילים, לצד רסק עגבניות פיקנטי, חמוצי הבית, טחינה ועמבה",
+};
+
+const cocktails = [
+  {
     category: "וויסקי סוואר ניו יורק טוויסט",
-    description: "בורבון איכותי, מיץ לימון טרי, סירופ סוכר, תוספת של יין אדום יבש לשכבה עליונה וארומה מודרנית"
+    description:
+      "בורבון איכותי, מיץ לימון טרי, סירופ סוכר, תוספת של יין אדום יבש לשכבה עליונה וארומה מודרנית",
   },
-  tacoMargarita: {
+  {
     category: "טאקו מרגריטה",
-    description: "טקילה אגבה, ליקר תפוזים, מיץ ליים, סירופ צ'ילי קלוי, מלח ופלפל על השפה – טעמים חריפים ומלוחים שמזכירים טאקו מקסיקני"
+    description:
+      "טקילה אגבה, ליקר תפוזים, מיץ ליים, סירופ צ'ילי קלוי, מלח ופלפל על השפה – טעמים חריפים ומלוחים שמזכירים טאקו מקסיקני",
   },
-  greyGarden: {
+  {
     category: "גרייק גארדן",
-    description: "ג'ין יבש, ליקר סיגליות, תה יסמין מצונן, סירופ לבנדר, ומי טוניק – קוקטייל פרחוני, מרענן ואלגנטי"
+    description:
+      "ג'ין יבש, ליקר סיגליות, תה יסמין מצונן, סירופ לבנדר, ומי טוניק – קוקטייל פרחוני, מרענן ואלגנטי",
   },
-  jasmine: {
+  {
     category: "גזמין",
-    description: "וודקה וניל, מיץ אשכוליות לבן, סירופ יסמין, מי ורדים ולימון – שילוב ארומטי ועדין של פרחים והדרים"
-  }
-};
+    description:
+      "וודקה וניל, מיץ אשכוליות לבן, סירופ יסמין, מי ורדים ולימון – שילוב ארומטי ועדין של פרחים והדרים",
+  },
+];
 
-const fullMenu = {
-  starters: {
-    stars: Object.values(starters).map(
-      item => `${item.category} ${item.description.length ? "-" : ""} ${item.description}`),
-  },
-  firsts: {
-    items: Object.values(firsts).map(
-      item => `${item.category} ${item.description.length ? "-" : ""} ${item.description}`
-    )
-
-  },
-  mains: {
-    items: Object.values(mains).map(
-      item => `${item.category} ${item.description.length ? "-" : ""} ${item.description}`
-    )
-  },
-  desserts: {
-    regularDesserts: [`${spacialDesserts.category} ${spacialDesserts.description.length ? "-" : ""} ${spacialDesserts.description}`],
-  },
-  afterParty: {
-    items: [`${afterParty.description}`],
-  },
-  drinks: {
-    items: Object.values(cocktails).map(
-      item => `${item.category} ${item.description.length ? "-" : ""} ${item.description}`
-    ),
-  },
-};
-
-
+const fullMenu = [
+  starters,
+  firsts,
+  mains,
+  [spacialDesserts, afterParty],
+  cocktails,
+];
 
 function App() {
   const [menuDisplay, setMenuDisplay] = useState(false);
   const [timerOnTop, setTimerOnTop] = useState(false);
   const width = window.innerWidth;
   const timerRef = useRef(null);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -252,22 +222,26 @@ function App() {
           <div>
             <div
               onClick={handleShowMenu}
-              className={`${timerOnTop
-                ? "fixed top-2 right-4 content-center"
-                : "relative content-start"
-                }  z-40 size-10 pt-2 space-y-2  cursor-pointer transition-transform`}
+              className={`${
+                timerOnTop
+                  ? "fixed top-2 right-4 content-center"
+                  : "relative content-start"
+              }  z-40 size-10 pt-2 space-y-2  cursor-pointer transition-transform`}
             >
               <p
-                className={`w-full rounded-md h-0.5 md:h-1 bg-slate-900 duration-150 ${menuDisplay ? `absolute top-4 rotate-45` : ""
-                  }`}
+                className={`w-full rounded-md h-0.5 md:h-1 bg-slate-900 duration-150 ${
+                  menuDisplay ? `absolute top-4 rotate-45` : ""
+                }`}
               ></p>
               <p
-                className={`w-4/6 rounded-md h-0.5  md:h-1 bg-slate-900 ${menuDisplay ? "hidden" : ""
-                  }`}
+                className={`w-4/6 rounded-md h-0.5  md:h-1 bg-slate-900 ${
+                  menuDisplay ? "hidden" : ""
+                }`}
               ></p>
               <p
-                className={`w-full rounded-md h-0.5 md:h-1 bg-slate-900 duration-150 ${menuDisplay ? "absolute top-2 -rotate-45" : ""
-                  }`}
+                className={`w-full rounded-md h-0.5 md:h-1 bg-slate-900 duration-150 ${
+                  menuDisplay ? "absolute top-2 -rotate-45" : ""
+                }`}
               ></p>
             </div>
           </div>
@@ -307,8 +281,9 @@ function App() {
         </div>
         <div
           ref={timerRef}
-          className={`${timerOnTop && "fixed top-0 left-0 bg-slate-50 z-10 shadow-md pb-1"
-            } w-full flex justify-center mb-5`}
+          className={`${
+            timerOnTop && "fixed top-0 left-0 bg-slate-50 z-10 shadow-md pb-1"
+          } w-full flex justify-center mb-5`}
         >
           <Timer styles={timerOnTop} />
         </div>
@@ -340,14 +315,19 @@ function App() {
         <div className="sm:flex justify-evenly items-center text-lg md:text-lg sm:m-10">
           <div className="space-y-12 sm:mt-0">
             <div className="mx-auto  text-center space-y-3 ">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-950">תאריך</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-950">
+                תאריך
+              </h2>
               <p>
-                יום חמישי<span className=" font-sans">,</span> י&quot;ד בתמוז התשפ&quot;ה <br />
+                יום חמישי<span className=" font-sans">,</span> י&quot;ד בתמוז
+                התשפ&quot;ה <br />
                 10.07.2025
               </p>
             </div>
             <div className="mx-auto text-center  space-y-3">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-950">שעה</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-950">
+                שעה
+              </h2>
               <p>
                 קבלת פנים 19:30
                 <br />
@@ -355,14 +335,16 @@ function App() {
               </p>
             </div>
             <div className="mx-auto text-center  space-y-3">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-950">מיקום</h2>
-              <p>׳אודאון׳
+              <h2 className="text-xl md:text-2xl font-bold text-gray-950">
+                מיקום
+              </h2>
+              <p>
+                ׳אודאון׳
                 <br />
                 עמק חפר
               </p>
             </div>
             <div className="flex gap-14 justify-center">
-
               <div className="text-center">
                 <p className="pb-2">הוראות הגעה</p>
                 <div className="flex flex-row gap-10">
@@ -386,11 +368,9 @@ function App() {
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
-
       </section>
       <Sections id={"sec-3"} styles="py-3 border-t-2 my-2">
         <h2 className="text-center font-script text-6xl md:text-9xl mt-4 mb-8 decoration-slate-400/20">
@@ -398,9 +378,7 @@ function App() {
         </h2>
         <div className="md:flex md:mt-10 md:py-2 md:justify-between">
           <MenuItem
-            menuItem={[
-              fullMenu.starters.stars,
-            ]}
+            menuItem={fullMenu[0]}
             topHeader={"Welcome Buffet"}
             header={["ביסים"]}
           />
@@ -415,7 +393,7 @@ function App() {
         <div>
           <div className="md:flex md:flex-row-reverse md:mt-10 md:gap-10 md:border-y-2 md:py-2 md:justify-between">
             <MenuItem
-              menuItem={[fullMenu.firsts.items]}
+              menuItem={fullMenu[1]}
               topHeader={"Let's Begin"}
               header={["פתיחה"]}
             />
@@ -429,7 +407,7 @@ function App() {
           <>
             <div className="md:flex md:mt-10 md:border-b-2 md:py-2 md:justify-between">
               <MenuItem
-                menuItem={[fullMenu.mains.items]}
+                menuItem={fullMenu[2]}
                 topHeader={"The Main Event"}
                 header={["עיקריות"]}
               />
@@ -442,7 +420,7 @@ function App() {
             </div>
             <div className="md:flex md:flex-row-reverse md:mt-10 md:py-2 md:justify-end md:gap-10">
               <MenuItem
-                menuItem={[fullMenu.desserts.regularDesserts, fullMenu.afterParty.items]}
+                menuItem={fullMenu[3]}
                 topHeader={"Midnight Cravings"}
                 header={["סיום מתוק", "אפטר פרטי"]}
               />
@@ -453,14 +431,13 @@ function App() {
                 src={[dessert]}
                 styles={`mx-auto md:rounded-md self-center size-9/12 mb-6 md:mx-0 md:mb-0 md:size-3/12 transition-all duarion-300`}
               />
-
             </div>
           </>
         </div>
       </Sections>
       <Sections id={"sec-4"} styles="py-3 border-t-2 my-2">
         <Drinks
-          menuItem={[fullMenu.drinks.items]}
+          menuItem={fullMenu[4]}
           header={["קוקטיילים"]}
           topHeader={"Shake It"}
         />
@@ -509,8 +486,16 @@ function App() {
 
         <div className="mt-5 text-[0.7rem] flex gap-x-2 flex-row-reverse mx-auto w-fit">
           <span className="">Made with</span>
-          <span className="pt-[0.2rem]"><CiHeart /></span>
-          <span> by <a target="_blank" href="tel:+972507984525" >Ofek Ben Avraham & Shmuel Atar</a></span>
+          <span className="pt-[0.2rem]">
+            <CiHeart />
+          </span>
+          <span>
+            {" "}
+            by{" "}
+            <a target="_blank" href="tel:+972507984525">
+              Ofek Ben Avraham & Shmuel Atar
+            </a>
+          </span>
         </div>
       </footer>
 

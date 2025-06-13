@@ -244,7 +244,7 @@ function App() {
 
   return (
     <main className="relative font-bds">
-      <BackgroundMusic />
+      <BackgroundMusic startTime={11} />
       <Sections id={"sec-1"} type="header" styles="h-screen mb-10 pb-5">
         <div
           className={`flex flex-row justify-start py-1 items-center md:justify-start  border-b-2`}
@@ -271,7 +271,7 @@ function App() {
               ></p>
             </div>
           </div>
-          <h2 className="duration-150 h-fit text-xl mr-[10%] sm:mx-[42%]  md:text-3xl font-extrabold">
+          <h2 className="duration-150 h-fit text-xl mr-[20%] sm:mx-[41.5%]  md:text-3xl font-extrabold">
             EDEN
             <span className="font-script text-2xl pr-2 pl-1  md:text-5xl">
               and
@@ -335,7 +335,7 @@ function App() {
       </Sections>
       <section
         id="sec-2"
-        className={`border-t text-slate-600 mb-10 pt-10 flex flex-col justify-between`}
+        className={`border-t text-slate-600 mb-10 mt-10 md:mt-0 pt-10 flex flex-col justify-between`}
       >
         <div className="sm:flex justify-evenly items-center text-lg md:text-lg sm:m-10">
           <div className="space-y-12 sm:mt-0">

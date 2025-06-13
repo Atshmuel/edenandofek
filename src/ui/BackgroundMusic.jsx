@@ -1,13 +1,18 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 
 export function BackgroundMusic() {
     const audioRef = useRef(null);
-    const [canPlay, setCanPlay] = useState(false);
 
     useEffect(() => {
         const handleFirstInteraction = () => {
-            setCanPlay(true);
-            // הסר את המאזינים אחרי האינטראקציה הראשונה
+            const audio = audioRef.current;
+            if (audio) {
+                audio.volume = 0.3;
+                audio.currentTime = 10;
+                audio.play().catch(console.error);
+            }
+
+            // הסר את המאזינים אחרי ההפעלה
             document.removeEventListener('click', handleFirstInteraction);
             document.removeEventListener('keydown', handleFirstInteraction);
             document.removeEventListener('touchstart', handleFirstInteraction);
@@ -23,14 +28,6 @@ export function BackgroundMusic() {
             document.removeEventListener('touchstart', handleFirstInteraction);
         };
     }, []);
-
-    useEffect(() => {
-        if (canPlay && audioRef.current) {
-            audioRef.current.volume = 0.1;
-            audioRef.current.play().catch(console.error);
-            audioRef.current.currentTime = 11;
-        }
-    }, [canPlay]);
 
     return (
         <audio

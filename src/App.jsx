@@ -28,6 +28,7 @@ import { TbBrandGoogleMaps } from "react-icons/tb";
 import { FaInstagram } from "react-icons/fa";
 import { CiFacebook, CiHeart } from "react-icons/ci";
 import { FaWaze } from "react-icons/fa6";
+import { BackgroundMusic } from "./ui/BackgroundMusic";
 
 
 const starters = {
@@ -243,6 +244,7 @@ function App() {
 
   return (
     <main className="relative font-bds">
+      <BackgroundMusic />
       <Sections id={"sec-1"} type="header" styles="h-screen mb-10 pb-5">
         <div
           className={`flex flex-row justify-start py-1 items-center md:justify-start  border-b-2`}
@@ -508,7 +510,7 @@ function App() {
         <div className="mt-5 text-[0.7rem] flex gap-x-2 flex-row-reverse mx-auto w-fit">
           <span className="">Made with</span>
           <span className="pt-[0.2rem]"><CiHeart /></span>
-          <span> by <a target="_blank" href="tel:+972507984525" >Ofek Ben Avraham</a></span>
+          <span> by <a target="_blank" href="tel:+972507984525" >Ofek Ben Avraham & Shmuel Atar</a></span>
         </div>
       </footer>
 

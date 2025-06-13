@@ -271,7 +271,7 @@ function App() {
               ></p>
             </div>
           </div>
-          <h2 className="duration-150 h-fit text-xl mr-[10%] sm:mx-auto  md:text-3xl font-extrabold">
+          <h2 className="duration-150 h-fit text-xl mr-[10%] sm:mx-[42%]  md:text-3xl font-extrabold">
             EDEN
             <span className="font-script text-2xl pr-2 pl-1  md:text-5xl">
               and

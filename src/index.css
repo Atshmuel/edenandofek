@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "franklin";
+  src: url("/fonts/Franklin/FRADM.ttf"), url("/fonts/Franklin/FRADMCN.ttf"),
+    url("/fonts/Franklin/FRADMIT.ttf"), url("/fonts/Franklin/FRADMHV.ttf"),
+    url("/fonts/Franklin/FRADMHVIT.ttf"), url("/fonts/Franklin/FRADMCN.ttf"),
+    url("/fonts/Franklin/framt.ttf"), url("/fonts/Franklin/framtit.ttf");
+}
+
+@font-face {
+  font-family: "pearl";
+  src: url("/fonts/tan-pearl.otf");
+}
+
+@font-face {
+  font-family: "bdsans";
+  src: url("/fonts/bdSans/BDSans-Thin.otf"),
+    url("/fonts/bdSans/BDSans-Black.otf"), url("/fonts/bdSans/BDSans-Bold.otf"),
+    url("/fonts/bdSans/BDSans-Regular.otf"),
+    url("/fonts/bdSans/BDScript-Bold.otf");
+}
+
+@font-face {
+  font-family: "bdscript";
+  src: url("/fonts/bdSans/BDScript-Bold.otf");
+}
+
+@font-face {
+  font-family: "arimo";
+  src: url("/fonts/Arimo/Arimo-Medium.ttf"),
+    url("/fonts/Arimo/Arimo-Regular.ttf"), url("/fonts/Arimo/Arimo-Bold.ttf"),
+    url("/fonts/Arimo/Arimo-SemiBold.ttf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

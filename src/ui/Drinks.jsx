@@ -25,7 +25,7 @@ function Drinks({ menuItem = [], topHeader = "", header }) {
                   {item ? (
                     <div
                       key={item.category}
-                      className="flex my-2 py-2 md:justify-between "
+                      className="flex items-center my-2 py-2 md:justify-between "
                     >
                       <li className="text-[0.85rem]  sm:text-sm tracking-tighter font-semibold">
                         {item.category} - {item.description}.
@@ -34,7 +34,7 @@ function Drinks({ menuItem = [], topHeader = "", header }) {
                         type={"aside"}
                         key={i}
                         styles={
-                          "w-24 h-24 md:30 rounded-full object-cover transition-all duration-300"
+                          "w-24 h-24 rounded-full  shrink-0 transition-all duration-300"
                         }
                         rootMargin={100}
                         src={[imgs.at(i).at(0)]}

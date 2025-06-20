@@ -34,7 +34,7 @@ function Drinks({ menuItem = [], topHeader = "", header }) {
                         type={"aside"}
                         key={i}
                         styles={
-                          "w-24 h-24 rounded-full object-cover transition-all duration-300"
+                          "w-24 h-24 md:30 rounded-full object-cover transition-all duration-300"
                         }
                         rootMargin={100}
                         src={[imgs.at(i).at(0)]}

@@ -5,12 +5,7 @@ import jesmin from "../assets/cocktails/jesmin.jpeg";
 import ny from "../assets/cocktails/ny.jpg";
 import tako from "../assets/cocktails/tako.jpg";
 
-const imgs = [
-  [ny],
-  [tako],
-  [greak],
-  [jesmin],
-];
+const imgs = [[ny], [tako], [greak], [jesmin]];
 
 function Drinks({ menuItem = [], topHeader = "", header }) {
   return (
@@ -33,13 +28,13 @@ function Drinks({ menuItem = [], topHeader = "", header }) {
                       className="flex my-2 py-2 md:justify-between "
                     >
                       <li className="text-[0.85rem]  sm:text-sm tracking-tighter font-semibold">
-                         {item.category} - {item.description}.
+                        {item.category} - {item.description}.
                       </li>
                       <Image
                         type={"aside"}
                         key={i}
                         styles={
-                          "w-20 h-20  rounded-full transition-all duration-300"
+                          "w-24 h-24 rounded-full object-cover transition-all duration-300"
                         }
                         rootMargin={100}
                         src={[imgs.at(i).at(0)]}

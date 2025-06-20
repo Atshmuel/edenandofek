@@ -1,21 +1,15 @@
 import Image from "./Image";
 
-import drink1 from "../assets/cocktails/img1.jpg";
-import drink2 from "../assets/cocktails/img2.jpg";
-import drink3 from "../assets/cocktails/img3.jpg";
-import drink4 from "../assets/cocktails/img4.jpg";
-import drink5 from "../assets/cocktails/img5.jpg";
-import drink6 from "../assets/cocktails/img6.jpg";
-import drink7 from "../assets/cocktails/img7.jpg";
+import greak from "../assets/cocktails/greak.jpeg";
+import jesmin from "../assets/cocktails/jesmin.jpeg";
+import ny from "../assets/cocktails/ny.jpg";
+import tako from "../assets/cocktails/tako.jpg";
 
 const imgs = [
-  [drink5],
-  [drink4],
-  [drink7],
-  [drink1],
-  [drink3],
-  [drink2],
-  [drink6],
+  [ny],
+  [tako],
+  [greak],
+  [jesmin],
 ];
 
 function Drinks({ menuItem = [], topHeader = "", header }) {
@@ -45,7 +39,7 @@ function Drinks({ menuItem = [], topHeader = "", header }) {
                         type={"aside"}
                         key={i}
                         styles={
-                          "w-20 md:w-30  rounded-full transition-all duration-300"
+                          "w-20 h-20  rounded-full transition-all duration-300"
                         }
                         rootMargin={100}
                         src={[imgs.at(i).at(0)]}

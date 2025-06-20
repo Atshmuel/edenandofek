@@ -56,7 +56,7 @@ export default function BackgroundMusic({ startTime = 0 }) {
 
       {showGate && (
         <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-6 text-center">
-          <div className="max-w-md space-y-6">
+          <div className="max-w-md space-y-6" dir="ltr">
             <p className="text-white text-2xl font-semibold leading-snug">
               Hey friends!
               <br />

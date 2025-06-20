@@ -29,7 +29,7 @@ import { TbBrandGoogleMaps } from "react-icons/tb";
 import { FaInstagram } from "react-icons/fa";
 import { CiFacebook, CiHeart } from "react-icons/ci";
 import { FaWaze } from "react-icons/fa6";
-import { BackgroundMusic } from "./ui/BackgroundMusic";
+import BackgroundMusic from "./ui/BackgroundMusic";
 
 const starters = [
   {
@@ -163,8 +163,7 @@ const cocktails = [
   },
   {
     category: "גזמין",
-    description:
-      "קמפרי, קואנטרו, ג'ין היביסקוס ולימון (מריר | פרחוני).",
+    description: "קמפרי, קואנטרו, ג'ין היביסקוס ולימון (מריר | פרחוני).",
   },
 ];
 

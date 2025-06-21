@@ -278,18 +278,13 @@ function App() {
             src={[thirdImgCompressed]}
           />
         </div>
-        <div className="relative">
-          <div
-            ref={timerRef}
-            className={`${
-              timerOnTop
-                ? "fixed top-0 left-0 bg-slate-50 z-10 shadow-md pb-1"
-                : ""
-            } w-full flex justify-center mb-5`}
-          >
-            <Timer styles={timerOnTop} />
-          </div>
-          {timerOnTop && <div className="w-full h-[120px]" />}
+        <div
+          ref={timerRef}
+          className={`${
+            timerOnTop && "fixed top-0 left-0 bg-slate-50 z-10 shadow-md pb-1"
+          } w-full flex justify-center mb-5`}
+        >
+          <Timer styles={timerOnTop} />
         </div>
         <div className={`flex sm:hidden justify-evenly mt-10 mb-10`}>
           <Image
